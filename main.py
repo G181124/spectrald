@@ -18,20 +18,13 @@ def print_banner():
     """
     print(color_text(banner, 'yellow'))
 
-    # Menambahkan titel di bawah banner dengan warna
-    print(color_text("   SpectraLD - Investigative Username OSINT Tool\n", 'blue'))
+    print(color_text("            [ SpectraLD - Find Usernames ]", 'blue'))
+    print(color_text("                  [ Created By RL ]\n", 'blue'))
 
 def main():
     print_banner()
     parser = argparse.ArgumentParser(
-        description="SpectraLD RLD - Investigative Username OSINT Tool\n"
-                    "SpectraLD is an open-source OSINT tool designed to search usernames across multiple platforms. "
-                    "This tool helps to identify whether a particular username exists on various online services, "
-                    "and gathers available metadata information when requested. It's optimized for speed and "
-                    "allows multithreaded searches to enhance performance.\n\n"
-                    "Usage example:\n"
-                    "  ./run.sh --username user1 user2 --fast --verbose\n"
-                    "This will search for 'user1' and 'user2' on supported platforms."
+        description="SpectraLD - Find Usernames on Public Platforms"
     )
     
     # Argument for usernames
@@ -64,7 +57,7 @@ def main():
 
     all_output_lines = []  # Store all results in one file
 
-    # Mengambil timestamp untuk memastikan file hasil unik
+    # Ngambil timestamp untuk memastikan file hasil unik
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
     for username in args.username:
@@ -72,7 +65,7 @@ def main():
         username_output_lines = run_username_check(username, verbose=args.verbose)
         all_output_lines.extend(username_output_lines)
 
-        # Menyimpan hasil pencarian berdasarkan username dengan timestamp
+        # Nyimpan hasil pencarian berdasarkan username dengan timestamp
         save_path_username = os.path.join("hasil", f"{username}_{timestamp}.txt")
         with open(save_path_username, "w", encoding="utf-8") as f:
             f.write("\n".join(all_output_lines))
