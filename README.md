@@ -3,10 +3,9 @@
 #### **1. Clone Repository**
    - Pertama, clone repository **SpectraLD** dari GitHub ke komputer Anda dengan perintah:
      ```bash
-     git clone https://github.com/username/spectrald
+     git clone https://github.com/G181124/spectrald
      ```
-     Gantilah `username` dengan nama pengguna GitHub yang sesuai.
-
+     
 #### **2. Memberikan Izin Eksekusi pada Skrip `run.sh`**
    - Setelah clone selesai, masuk ke direktori proyek dan berikan izin eksekusi pada file `run.sh` dengan perintah:
      ```bash
@@ -47,7 +46,7 @@
 - Hasil pencarian akan disimpan dalam folder **`hasil/`**, dengan nama file yang mencakup **username** dan **timestamp**:
   - Contoh nama file:
     ```
-    hasil/username_2025-04-07_10-33-56.txt
+    hasil/username_2025-11-07_10-33-56.txt
     ```
 
 - Hasil ini akan mencakup informasi tentang status **200** (ditemukan) atau **404** (tidak ditemukan) untuk setiap platform yang diperiksa.
@@ -62,12 +61,12 @@ Jika Anda menjalankan perintah berikut:
 Anda akan melihat output seperti ini:
 ```
 --- Mencari untuk username: mrbeast ---
-[+] Facebook      → ✅ https://www.facebook.com/mrbeast
-[+] Instagram     → ✅ https://www.instagram.com/mrbeast
-[+] TikTok        → ✅ https://www.tiktok.com/@mrbeast
+[+] Facebook      → ✅ https://www.facebook.com/mranonymous
+[+] Instagram     → ✅ https://www.instagram.com/mranonymous
+[+] TikTok        → ✅ https://www.tiktok.com/@mranonymous
 ...
 [✓] Pencarian selesai — 16 hasil ditemukan.
-📁 Hasil disimpan di: hasil/mrbeast_2025-04-07_10-33-56.txt
+📁 Hasil disimpan di: hasil/mranonymous_2025-11-07_10-33-56.txt
 ```
 
 ---
